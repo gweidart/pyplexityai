@@ -1,0 +1,136 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyplexityai"
+version = "0.1.0"
+description = "A clean, lightweight, and modern Python client for the Perplexity AI API with OpenAI compatibility. Built with PyPy and JIT-GIL enhancements for optimal performance."
+authors = [
+    {name = "gweidart", email = "gweidart@gmail.com"},
+]
+dependencies = [
+    "requests>=2.33.3",
+    "diagnostic>=2.1.0",
+    "aiohttp>=3.11.12",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+keywords = [
+    "cursor",
+    "cursor-ai",
+    "cursor-ai-client",
+    "cursor-ai-api",
+    "cursor-ai-openai",
+    "cursor-ai-openai-compatible",
+    "cursor-ai-openai-compatible-client",
+    "cursor-ai-openai-compatible-client-python",
+    "cursor-tools",
+    "cursor-utils",
+    "perplexity",
+    "perplexity-ai",
+    "ai",
+    "artificial-intelligence",
+    "chatbot",
+    "llm",
+    "large-language-model",
+    "openai",
+    "chatgpt",
+    "gpt",
+    "llama",
+    "mistral",
+    "mixtral",
+    "search",
+    "semantic-search",
+    "async",
+    "websockets",
+    "streaming",
+    "api-client",
+    "nlp",
+    "natural-language-processing",
+    "machine-learning",
+    "ml",
+    "ai-search",
+    "ai-assistant",
+    "openai-compatible",
+    "pypy",
+    "pypy-jit",
+    "jit-optimization",
+    "gil-enhancement",
+    "high-performance",
+    "optimized",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Text Processing :: General",
+    "Framework :: AsyncIO",
+    "Framework :: aiohttp",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/gweidart/pyplexityai"
+Documentation = "https://github.com/gweidart/pyplexityai#readme"
+Repository = "https://github.com/gweidart/pyplexityai.git"
+Issues = "https://github.com/gweidart/pyplexityai/issues"
+Changelog = "https://github.com/gweidart/pyplexityai/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+async = [
+    "anyio>=4.8.0",
+]
+dev = [
+    "ruff>=0.9.6",
+    "pyright>=1.1.393",
+    "python-dotenv>=1.0.1",
+    "bump-my-version>=0.32.1",
+    "hatchling>=1.27.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyplexityai"]
+
+[tool.hatch.version]
+path = "pyplexityai/__init__.py"
+
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.6",
+    "pyright>=1.1.393",
+    "python-dotenv>=1.0.1",
+    "bump-my-version>=0.32.1",
+    "hatchling>=1.27.0",
+]
+
+[tool.pyright]
+include = ["pyplexityai"]
+exclude = ["**/node_modules", "**/__pycache__"]
+venv = ".venv"
+venvPath = "."
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+pythonImplementation = "pypy"
+pythonPath = ".venv/bin/python"
+pythonInterpreter = ".venv/bin/python"
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = true
+reportUnknownMemberType = true
+reportUnknownParameterType = true
+reportUnknownVariableType = true
+reportUnknownArgumentType = true
+reportPrivateUsage = true
+reportUnnecessaryIsInstance = true
